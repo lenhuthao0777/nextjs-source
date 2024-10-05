@@ -7,7 +7,7 @@
     "semi": ["error"],
     "quotes": ["error", "single"],
     "check-file/no-index": "error",
-    "no-console": "error",
+    "no-console": "warn",
     "check-file/filename-naming-convention": [
       "error",
       {
