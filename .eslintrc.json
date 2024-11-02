@@ -4,7 +4,7 @@
   "rules": {
     "prefer-arrow-callback": ["error"],
     "prefer-template": ["error"],
-    "semi": ["error"],
+    "semi": ["off"],
     "quotes": ["error", "single"],
     "check-file/no-index": "error",
     "no-console": "warn",
