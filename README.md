@@ -1,44 +1,123 @@
-# fe-source-code
+# Frontend Source Code
 
 ## Project Overview
 
-This project is a **Next.js** web application built with **React** and **TypeScript**. It includes **Tailwind CSS** for styling and uses several development tools like **ESLint**, **Prettier**, and **Husky** for code quality management. The project uses **pnpm** as the package manager for improved performance and dependency handling.
+A modern web application built with cutting-edge technologies for optimal performance and developer experience.
 
-## Prerequisites
+### Tech Stack
 
-Before running this project, ensure you have the following installed on your machine:
+- **Framework**: Next.js 13+
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Package Manager**: pnpm
+- **Code Quality**: ESLint, Prettier, Husky
 
-- **Node.js** (version 16 or higher)
-- **pnpm** (version 8 or higher)
+## Getting Started
 
-If pnpm is not installed, you can install it globally by running:
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- pnpm (version 8 or higher)
+
+To install pnpm globally:
 
 ```bash
 npm install -g pnpm
-
-
-
-### Key Highlights:
-
-1. **Prerequisites**: Node.js and pnpm are required to install and run the project.
-2. **Installation and Usage**: Detailed steps on how to clone, install dependencies, and start the project in development and production modes.
-3. **Scripts**: Explains how to use the main scripts (`dev`, `build`, `start`, `lint`, `format`, etc.) for running and maintaining the code.
-4. **Dependencies**: Lists both runtime and development dependencies.
-5. **Husky**: Describes how Git hooks are managed using Husky.
-6. **TypeScript and Tailwind**: Explains the use of TypeScript for type checking and Tailwind CSS for styling.
-
-Let me know if you'd like further adjustments!
-
-
-Project Scripts
-Available npm Scripts
-The package.json contains several useful scripts for development and production tasks:
-
-**pnpm dev:** Starts the Next.js development server.
-**pnpm build:** Builds the application for production.
-**pnpm start:** Starts the application in production mode after building.
-**pnpm format:** Formats the codebase using Prettier.
-**pnpm lint:** Runs ESLint to fix and lint the code.
-**pnpm check:type:** Runs TypeScript's type checker to catch any type errors.
-**pnpm check:** Runs linting, formatting, and type checking together for code quality control.
 ```
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd <project-directory>
+```
+
+2. Install dependencies:
+
+```bash
+pnpm install
+```
+
+3. Set up environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+4. Start the development server:
+
+```bash
+pnpm dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Available Scripts
+
+| Command           | Description                  |
+| ----------------- | ---------------------------- |
+| `pnpm dev`        | Starts development server    |
+| `pnpm build`      | Builds for production        |
+| `pnpm start`      | Runs production server       |
+| `pnpm lint`       | Runs ESLint checks           |
+| `pnpm format`     | Formats code with Prettier   |
+| `pnpm check:type` | Runs TypeScript checks       |
+| `pnpm check`      | Runs all code quality checks |
+
+## Project Structure
+
+```
+src/
+├── app/              # App router pages and layouts
+│   ├── (auth)/      # Authentication related routes
+│   └── api/         # API routes
+├── components/       # Reusable UI components
+├── lib/             # Utility functions
+└── styles/          # Global styles
+```
+
+## Development
+
+### Code Quality
+
+- **ESLint**: JavaScript/TypeScript linting
+- **Prettier**: Code formatting
+- **Husky**: Git hooks for pre-commit checks
+- **TypeScript**: Static type checking
+
+### Environment Variables
+
+Required environment variables:
+
+```bash
+NEXT_PUBLIC_API_URL=
+DATABASE_URL=
+NEXTAUTH_SECRET=
+```
+
+## Deployment
+
+Build the application:
+
+```bash
+pnpm build
+```
+
+Start the production server:
+
+```bash
+pnpm start
+```
+
+## Contributing
+
+1. Create a feature branch
+2. Commit changes
+3. Push to the branch
+4. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
