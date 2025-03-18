@@ -2,7 +2,11 @@
 
 import { useEffect } from 'react'
 
+import { signOut, useSession } from 'next-auth/react'
+
 export default function Comp() {
+  const session = useSession()
+
   const handleGoogleSignIn = () => {
     const width = 500
     const height = 600
@@ -32,10 +36,16 @@ export default function Comp() {
     }
   }, [])
   return (
-    <div>
-      <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => handleGoogleSignIn()}>
-        Liên kết với Google
-      </button>
-    </div>
+    <>
+      {session.data?.user ? (
+        <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => handleGoogleSignIn()}>
+          Liên kết với Google
+        </button>
+      ) : (
+        <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => signOut()}>
+          Logout
+        </button>
+      )}
+    </>
   )
 }
