@@ -38,12 +38,12 @@ export default function Comp() {
   return (
     <>
       {session.data?.user ? (
-        <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => handleGoogleSignIn()}>
-          Liên kết với Google
-        </button>
-      ) : (
         <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => signOut()}>
           Logout
+        </button>
+      ) : (
+        <button type="button" className="bg-gray-7 border-gray-1 text-black-2 w-full max-w-[222px] border text-xs font-semibold" onClick={() => handleGoogleSignIn()}>
+          Liên kết với Google
         </button>
       )}
     </>
