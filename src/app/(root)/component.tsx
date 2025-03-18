@@ -35,6 +35,9 @@ export default function Comp() {
       window.close()
     }
   }, [])
+
+  console.log(session.data?.user)
+
   return (
     <>
       {session.data?.user ? (
